@@ -42,12 +42,12 @@ $(document).ready(function () {
   
   
   //displays current date w/in header
-  // function displayDate() {
-  //   var currentDate = dayjs().format("dddd, MMMM, D, YYYY");
-  //   $("#currentDay").text(currentDate);
-  // }
-  // updateHours();
-  // displayDate();
-  // setInterval(displayDate(), 60000);
+  function displayDate() {
+    var currentDate = dayjs().format("dddd, MMMM, D, YYYY");
+    $("#currentDay").text(currentDate);
+  }
+  updateHours();
+  displayDate();
+  setInterval(displayDate(), 60000);
 
 });
