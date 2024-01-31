@@ -30,15 +30,15 @@ $(document).ready(function () {
   
 
   //saves associated textarea elements
-  // $(".time-block").each(function(){
-  //   var timeBlock = $(this);
-  //   var timeBlockID = timeBlock.attr("id");
-  //   var savedEvent = localStorage.getItem(timeBlockID)
+  $(".time-block").each(function(){
+    var timeBlock = $(this);
+    var timeBlockID = timeBlock.attr("id");
+    var savedEvent = localStorage.getItem(timeBlockID)
 
-  //   if(savedEvent) {
-  //     timeBlock.find(".description").val(savedEvent);
-  //   }
-  // })
+    if(savedEvent) {
+      timeBlock.find(".description").val(savedEvent);
+    }
+  })
   
   
   //displays current date w/in header
