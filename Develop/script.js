@@ -12,21 +12,21 @@ $(document).ready(function () {
   })
 
   //validates data by comparing current time w/ various time blocks; assigns class once validated
-  // function updateHours() {
-  //   var currentHour = dayjs().hour();
-  //   $(".time-block").each(function() {
-  //     var timeBlock = $(this);
-  //     var timeBlockHour = parseInt(timeBlock.attr("id").split("-")[1]);
+  function updateHours() {
+    var currentHour = dayjs().hour();
+    $(".time-block").each(function() {
+      var timeBlock = $(this);
+      var timeBlockHour = parseInt(timeBlock.attr("id").split("-")[1]);
 
-  //     if (timeBlockHour < currentHour) {
-  //       timeBlock.removeClass("present future").addClass("past");
-  //     } else if (timeBlockHour === currentHour){
-  //       timeBlock.removeClass("past future").addClass("present");
-  //     } else if (timeBlockHour > currentHour){
-  //       timeBlock.removeClass("past present").addClass("future");
-  //     }
-  //   });
-  // }
+      if (timeBlockHour < currentHour) {
+        timeBlock.removeClass("present future").addClass("past");
+      } else if (timeBlockHour === currentHour){
+        timeBlock.removeClass("past future").addClass("present");
+      } else if (timeBlockHour > currentHour){
+        timeBlock.removeClass("past present").addClass("future");
+      }
+    });
+  }
   
 
   //saves associated textarea elements
